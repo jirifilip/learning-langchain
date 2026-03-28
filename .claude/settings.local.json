@@ -8,7 +8,12 @@
       "Bash(git commit:*)",
       "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)\\)\")",
       "WebSearch",
-      "WebFetch(domain:logfire.pydantic.dev)"
+      "WebFetch(domain:logfire.pydantic.dev)",
+      "Bash(uv sync:*)",
+      "Bash(uv run:*)",
+      "Bash(uv python:*)",
+      "Bash(uv pip:*)",
+      "Bash(pip index:*)"
     ]
   }
 }
