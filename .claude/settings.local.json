@@ -3,7 +3,10 @@
     "allow": [
       "mcp__filesystem__directory_tree",
       "Bash(.venv/Scripts/pip show:*)",
-      "mcp__docs-langchain__search_docs_by_lang_chain"
+      "mcp__docs-langchain__search_docs_by_lang_chain",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d, indent=2\\)\\)\")"
     ]
   }
 }
