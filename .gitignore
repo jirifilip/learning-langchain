@@ -217,4 +217,6 @@ __marimo__/
 
 *.ipynb
 
+# mlflow
 *.db
+mlartifacts
