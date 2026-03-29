@@ -25,3 +25,7 @@ Every notebook file must include the jupytext frontmatter:
 ```
 
 Cells use `# %%` for code and `# %% [markdown]` for markdown.
+
+# Plans
+
+Do not commit plans to git. Plans are ephemeral and belong in the conversation context only.
