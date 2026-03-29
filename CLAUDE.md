@@ -26,6 +26,16 @@ Every notebook file must include the jupytext frontmatter:
 
 Cells use `# %%` for code and `# %% [markdown]` for markdown.
 
+# Tracing
+
+MLFlow runs in Docker via `docker-compose.yml` with the `tracing` profile. Start it with:
+
+```bash
+just trace
+```
+
+This runs `docker compose --profile tracing up -d`, starting MLFlow on `http://localhost:5000`. Notebooks connect to this via `mlflow.set_tracking_uri("http://localhost:5000")` in `notebooks/2026_03_28_initial_examples/utils.py`.
+
 # Plans
 
 Do not commit plans to git. Plans are ephemeral and belong in the conversation context only.

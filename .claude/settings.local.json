@@ -13,7 +13,8 @@
       "Bash(uv run:*)",
       "Bash(uv python:*)",
       "Bash(uv pip:*)",
-      "Bash(pip index:*)"
+      "Bash(pip index:*)",
+      "Bash(grep -m1 'name = \"\"mlflow\"\"' \"/c/code/python/learning-langchain/uv.lock\" -A3)"
     ]
   }
 }

@@ -4,4 +4,4 @@ research:
     uv run jupyter lab --config .jupyter/jupyter_lab_config.py
 
 trace:
-    uv run mlflow ui
+    docker compose --profile tracing up

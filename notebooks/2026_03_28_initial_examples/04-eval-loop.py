@@ -96,8 +96,5 @@ with mlflow.start_run(run_name="qa-eval"):
     mlflow.log_metric("exact_match_mean", results_df["exact_match"].mean())
     mlflow.log_metric("num_examples", len(results_df))
 
-    # Log per-example results as an artifact
-    mlflow.log_artifact("eval_results.csv")
-
     print(results_df.to_string(index=False))
     print(f"\nExact match: {results_df['exact_match'].mean():.0%}")
