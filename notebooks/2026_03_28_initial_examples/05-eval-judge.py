@@ -77,25 +77,10 @@ chain = prompt | llm
 
 
 def predict_fn(question: str) -> str:
+    print("invoking")
     response = chain.invoke({"question": question})
+    print("invoked")
     return response.content
-
-# %% [markdown]
-# ## 3. Define a custom LLM judge with `make_judge`
-#
-# Use `{{ outputs }}` and `{{ expectations }}` as template variables in instructions.
-
-# %%
-conciseness_judge = make_judge(
-    name="conciseness",
-    instructions=(
-        "Evaluate whether the answer is concise (one sentence or fewer).\n\n"
-        "Question: {{ inputs }}\n\n"
-        "Answer: {{ outputs }}\n\n"
-        "Score 1 if concise, 0 if not."
-    ),
-    feedback_value_type=int,
-)
 
 # %% [markdown]
 # ## 4. Define a code-based scorer with `@scorer`
