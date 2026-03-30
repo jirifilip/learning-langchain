@@ -9,11 +9,11 @@ services:
     profiles:
       - tracing
     volumes:
-      - ./mlflow.db:/mlflow/mlflow.db
+      - ./mlflow.db:/mlflow/db
       - ./mlartifacts:/mlflow/mlartifacts
     command: >
       mlflow server
       --host 0.0.0.0
       --port 5000
-      --backend-store-uri sqlite:///mlflow/mlflow.db
+      --backend-store-uri sqlite:///mlflow/db/mlflow.db
       --artifacts-destination /mlflow/mlartifacts
