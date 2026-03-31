@@ -15,7 +15,13 @@
       "Bash(uv pip:*)",
       "Bash(pip index:*)",
       "Bash(grep -m1 'name = \"\"mlflow\"\"' \"/c/code/python/learning-langchain/uv.lock\" -A3)",
-      "WebFetch(domain:mlflow.org)"
+      "WebFetch(domain:mlflow.org)",
+      "mcp__jetbrains__get_all_open_file_paths",
+      "mcp__jetbrains__open_file_in_editor"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "mlflow-mcp"
+  ],
+  "enableAllProjectMcpServers": true
 }

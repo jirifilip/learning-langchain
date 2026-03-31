@@ -202,6 +202,21 @@ for data in INVOICE_DATA:
 print(f"\nGenerated {len(invoices)} invoices")
 
 # %% [markdown]
+# ### Inspect generated invoices
+
+# %%
+import matplotlib.pyplot as plt
+
+fig, axes = plt.subplots(1, len(invoices), figsize=(5 * len(invoices), 7))
+for ax, inv in zip(axes, invoices):
+    img = Image.open(io.BytesIO(base64.b64decode(inv["b64"])))
+    ax.imshow(img)
+    ax.set_title(inv["id"], fontsize=10)
+    ax.axis("off")
+plt.tight_layout()
+plt.show()
+
+# %% [markdown]
 # ## 2. Define the extraction schema
 #
 # Structured output that GPT-4o will populate from each invoice image.
